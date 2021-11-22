@@ -1,0 +1,31 @@
+{
+    "name": "diegoborgs/natural-swagger-php",
+    "description": "The Swagger UI Render for you PHP Application",
+    "type": "library",
+    "require": {
+        "zircote/swagger-php": "^3.3",
+        "twig/twig": "^3.0",
+        "psr/container": "^2.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Diegoborgs\\NaturalSwaggerPhp\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Diego Borges",
+            "email": "ferreirabdiego@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "mockery/mockery": "^1.4"
+    }
+}
