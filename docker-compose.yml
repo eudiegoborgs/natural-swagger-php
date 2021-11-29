@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  image:
+    container_name: natural-swagger-php.image
+    image: natural-swagger-php
+    command: list
+    build: .
+
+  composer:
+    container_name: natural-swagger-php.composer
+    image: natural-swagger-php
+    depends_on:
+      - image
+    entrypoint: composer
+    volumes:
+      - ./:/app

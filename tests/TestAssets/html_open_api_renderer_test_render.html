@@ -1,22 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-{% block meta %}
     <meta charset="UTF-8">
-{% endblock meta %}
-    <title>{% block title %}{{ swagger_data.spec.info.title }}{% endblock title %}</title>
+    <title></title>
 
-{% block stylesheets %}
-    {{ "#{base_assets}/swagger-ui/swagger-ui.css" }}
-    {{ "#{base_assets}/style.css" }}
-{% endblock stylesheets %}
+    https://cdn.jsdelivr.net/gh/eudiegoborgs/natural-swagger-php/src/Resources/assets/swagger-ui/swagger-ui.css
+    https://cdn.jsdelivr.net/gh/eudiegoborgs/natural-swagger-php/src/Resources/assets/style.css
 
-{% block swagger_data %}
-    <script id="swagger-data" type="application/json">{{ swagger_data|json_encode(65)|raw }}</script>
-{% endblock swagger_data %}
+    <script id="swagger-data" type="application/json">{"spec":{"data":"value"}}</script>
 </head>
 <body>
-{% block svg_icons %}
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:absolute;width:0;height:0">
     <defs>
         <symbol viewBox="0 0 20 20" id="unlocked">
@@ -42,33 +35,24 @@
         </symbol>
     </defs>
 </svg>
-{% endblock svg_icons %}
 <header>
-{% block header %}
     <a id="logo" href="https://github.com/nelmio/NelmioApiDocBundle">
-        <img src="{{ "#{base_assets}/logo.png" }}" alt="NelmioApiDocBundle">
+        <img src="https://cdn.jsdelivr.net/gh/eudiegoborgs/natural-swagger-php/src/Resources/assets/logo.png" alt="NelmioApiDocBundle">
     </a>
-{% endblock header %}
 </header>
 
-{% block swagger_ui %}
 <div id="swagger-ui" class="api-platform"></div>
-{% endblock %}
 
-{% block javascripts %}
-{{ "#{base_assets}/swagger-ui/swagger-ui-bundle.js" }}
-{{ "#{base_assets}/swagger-ui/swagger-ui-standalone-preset.js" }}
-{% endblock javascripts %}
+https://cdn.jsdelivr.net/gh/eudiegoborgs/natural-swagger-php/src/Resources/assets/swagger-ui/swagger-ui-bundle.js
+https://cdn.jsdelivr.net/gh/eudiegoborgs/natural-swagger-php/src/Resources/assets/swagger-ui/swagger-ui-standalone-preset.js
 
-{{ "#{base_assets}/init-swagger-ui.js" }}
+https://cdn.jsdelivr.net/gh/eudiegoborgs/natural-swagger-php/src/Resources/assets/init-swagger-ui.js
 
-{% block swagger_initialization %}
 <script type="text/javascript">
     (function () {
-        var swaggerUI = {{ swagger_ui_config|json_encode(65)|raw }};
+        var swaggerUI = null;
         window.onload = loadSwaggerUI(swaggerUI);
     })();
 </script>
-{% endblock swagger_initialization %}
 </body>
 </html>

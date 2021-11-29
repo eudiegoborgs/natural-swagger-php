@@ -51,4 +51,11 @@ class RenderOpenApiTest extends TestCase
             $render->render(RenderOpenApi::HTML, ['base_path' => 'test_path'])
         );
     }
+
+    public function testConstructWithNullRender()
+    {
+        $this->expectException(\TypeError::class);
+        $generatorMock = $this->createMock(Generator::class);
+        $render = new RenderOpenApi($generatorMock, null);
+    }
 }

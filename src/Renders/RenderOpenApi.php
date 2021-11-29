@@ -23,9 +23,6 @@ class RenderOpenApi
     public function __construct(Generator $generator, OpenApiRendererInterface ...$renderers)
     {
         foreach ($renderers as $renderer) {
-            if (null === $renderer) {
-                continue;
-            }
             $this->renderers[$renderer->getFormat()] = $renderer;
         }
         $this->generator = $generator;
@@ -38,7 +35,7 @@ class RenderOpenApi
     /**
      * @throws \InvalidArgumentException If the area to dump is not valid
      */
-    public function render(string $format, array $options = []): string
+    public function render(string $format = RenderOpenApi::JSON, array $options = []): string
     {
         $options = array_merge([
             'base_path' => __DIR__

@@ -18,6 +18,10 @@
             "Tests\\": "tests/"
         }
     },
+    "scripts": {
+        "test": "phpunit --colors=always --coverage-text",
+        "coverage": "phpunit --colors=always --coverage-html=./tests/reports/coverage "
+    },
     "authors": [
         {
             "name": "Diego Borges",
