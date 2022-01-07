@@ -9,7 +9,7 @@ use Diegoborgs\NaturalSwaggerPhp\Renders\YAMLOpenApiRenderer;
 
 class OpenApiRenderFactory
 {
-    public function get(): RenderOpenApi
+    public static function get(): RenderOpenApi
     {
         return new RenderOpenApi(
             new HTMLOpenApiRenderer(),
