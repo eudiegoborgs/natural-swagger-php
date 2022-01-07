@@ -7,11 +7,11 @@ on:
   pull_request:
     branches:
       - "*.x"
-      - master
+      - main
   push:
     branches:
       - "*.x"
-      - master
+      - main
 
 env:
   fail-fast: true
