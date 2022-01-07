@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <title>{{ swagger_data.spec.info.title }}</title>
 
-    <link rel="stylesheet" href="{{ "#{base_assets}/swagger-ui.css" }}" type="text/css" />
+    <link rel="stylesheet" href="{{ "#{base_assets}/swagger-ui/swagger-ui.css" }}" type="text/css" />
     <link rel="stylesheet" href="{{ "#{base_assets}/style.css" }}" />
-    <link rel="icon" type="image/png" href="{{ "#{base_assets}/favicon-32x32.png" }}" sizes="32x32" />
-    <link rel="icon" type="image/png" href="{{ "#{base_assets}/favicon-16x16.png" }}" sizes="16x16" />
+    <link rel="icon" type="image/png" href="{{ "#{base_assets}/swagger-ui/favicon-32x32.png" }}" sizes="32x32" />
+    <link rel="icon" type="image/png" href="{{ "#{base_assets}/swagger-ui/favicon-16x16.png" }}" sizes="16x16" />
     <style>
         html
         {
@@ -29,13 +29,14 @@
             background: #fafafa;
         }
     </style>
+    <script id="swagger-data" type="application/json">{{ swagger_data|json_encode(65)|raw }}</script>
 </head>
 
 <body>
     <div id="swagger-ui" class="api-platform"></div>
 
-    <script src="{{ "#{base_assets}/swagger-ui/swagger-ui-bundle.js" }}"></script>
-    <script src="{{ "#{base_assets}/swagger-ui/swagger-ui-standalone-preset.js" }}"></script>
+    <script src="{{ "#{base_assets}/swagger-ui/swagger-ui/swagger-ui-bundle.js" }}"></script>
+    <script src="{{ "#{base_assets}/swagger-ui/swagger-ui/swagger-ui-standalone-preset.js" }}"></script>
     <script src="{{ "#{base_assets}/init-swagger-ui.js" }}"></script>
     <script type="text/javascript">
         (function () {
