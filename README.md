@@ -14,7 +14,7 @@ This library provide for your system a swagger UI based
 
 #### Install with composer:
 ```sh
-composer require eudiegoborgs/natural-swagger-php
+composer require diegoborgs/natural-swagger-php
 ```
 
 #### Add to your code:
