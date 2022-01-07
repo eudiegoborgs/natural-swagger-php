@@ -3,7 +3,6 @@
 namespace Diegoborgs\NaturalSwaggerPhp\Renders;
 
 use OpenApi\Generator;
-use OpenApi\Util;
 
 class RenderOpenApi
 {
@@ -18,14 +17,11 @@ class RenderOpenApi
      */
     private array $renderers;
 
-    private Generator $generator;
-
-    public function __construct(Generator $generator, OpenApiRendererInterface ...$renderers)
+    public function __construct(OpenApiRendererInterface ...$renderers)
     {
         foreach ($renderers as $renderer) {
             $this->renderers[$renderer->getFormat()] = $renderer;
         }
-        $this->generator = $generator;
     }
 
     public function getAvailableFormats(): array
@@ -40,7 +36,8 @@ class RenderOpenApi
         $options = array_merge([
             'base_path' => __DIR__
         ], $options);
-        $spec = $this->generator->generate(Util::finder($options['base_path'], null, self::PHP_PATTERN));
+
+        $spec = Generator::scan([$options['base_path']]);
 
         return $this->renderers[$format]->render($spec, $options);
     }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ swagger_data.spec.info.title }}</title>
+
+    <link rel="stylesheet" href="{{ "#{base_assets}/swagger-ui.css" }}" type="text/css" />
+    <link rel="stylesheet" href="{{ "#{base_assets}/style.css" }}" />
+    <link rel="icon" type="image/png" href="{{ "#{base_assets}/favicon-32x32.png" }}" sizes="32x32" />
+    <link rel="icon" type="image/png" href="{{ "#{base_assets}/favicon-16x16.png" }}" sizes="16x16" />
+    <style>
+        html
+        {
+            box-sizing: border-box;
+            overflow: -moz-scrollbars-vertical;
+            overflow-y: scroll;
+        }
+
+        *,
+        *:before,
+        *:after
+        {
+            box-sizing: inherit;
+        }
+
+        body
+        {
+            margin:0;
+            background: #fafafa;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="swagger-ui" class="api-platform"></div>
+
+    <script src="{{ "#{base_assets}/swagger-ui/swagger-ui-bundle.js" }}"></script>
+    <script src="{{ "#{base_assets}/swagger-ui/swagger-ui-standalone-preset.js" }}"></script>
+    <script src="{{ "#{base_assets}/init-swagger-ui.js" }}"></script>
+    <script type="text/javascript">
+        (function () {
+            var swaggerUI = {{ swagger_ui_config|json_encode(65)|raw }};
+            window.onload = loadSwaggerUI(swaggerUI);
+        })();
+    </script>
+</body>
+</html>

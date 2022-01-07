@@ -30,7 +30,7 @@ class HTMLOpenApiRenderer implements OpenApiRendererInterface
     public function render(OpenApi $spec, array $options = []): string
     {
         return $this->twig->render(
-            'SwaggerUi/index.html.twig',
+            'SwaggerUi/swagger.html.twig',
             array_merge_recursive(
                 $options,
                 [
