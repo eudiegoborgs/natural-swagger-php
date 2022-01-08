@@ -9,8 +9,8 @@ RUN curl --insecure https://getcomposer.org/composer-stable.phar -o /usr/bin/com
 
 WORKDIR /app
 
-COPY ./composer.* /app
+COPY ./composer.* /app/
 
 RUN composer install --prefer-dist
 
-COPY . /app
+COPY . /app/
