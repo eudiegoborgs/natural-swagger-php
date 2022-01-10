@@ -3,7 +3,7 @@
 [![Build Status](https://img.shields.io/github/workflow/status/eudiegoborgs/natural-swagger-php/CI?style=flat-square)](https://github.com/eudiegoborgs/natural-swagger-php/actions?query=workflow:CI) 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/eudiegoborgs/natural-swagger-php/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/eudiegoborgs/natural-swagger-php/?branch=main)
 [![Code Intelligence Status](https://scrutinizer-ci.com/g/eudiegoborgs/natural-swagger-php/badges/code-intelligence.svg?b=main)](https://scrutinizer-ci.com/code-intelligence)
-[![Total Downloads](https://img.shields.io/packagist/dt/eudiegoborgs/natural-swagger-php.svg)](https://packagist.org/packages/eudiegoborgs/natural-swagger-php)
+[![Total Downloads](https://img.shields.io/packagist/dt/diegoborgs/natural-swagger-php.svg)](https://packagist.org/packages/diegoborgs/natural-swagger-php)
 [![Latest Stable Version](https://poser.pugx.org/diegoborgs/natural-swagger-php/v/stable)](https://packagist.org/packages/diegoborgs/natural-swagger-php)
 
 The NaturalSwagger allows you to generate a decent documentation for your APIs. This library is based on [zircote/swagger-php](https://github.com/zircote/swagger-php) and [swagger-ui](https://github.com/swagger-api/swagger-ui).
